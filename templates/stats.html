@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<div class=page>
+<body>
+	<h2>{{crypto}}</h2>
+	<h2>Stock Moving Average and Stock Data:</h2>
+	<a href="{{ url_for('plot') }}">Plot</a>
+	{% for table in tables %}
+   		{{ table|safe }}
+	{% endfor %}
+	<h2>Would you like to buy or sell this stock?</h2>
+		<form action = "{{url_for('get_shares_sell')}}" method = "POST">
+	    	<select name = "buy_sell">
+		    <option value="buy">buy</option>
+		    <option value="sell">sell</option>
+	    	</select>     
+	    	<input type = "submit">
+	    </form>
+</body>
+</div>
+</html>
+

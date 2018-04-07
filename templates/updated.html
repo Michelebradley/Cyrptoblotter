@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<div class=page>
+<body>
+	<h1>New Blotter Data:</h1>
+	{% for table in tables %}
+   		{{ table|safe }}
+	{% endfor %}
+	<h1>Choose a Cryptocurrency to Trade</h1>
+	<form action = "{{url_for('get_crypto_name')}}" method = "POST">
+	    <select name = "cryptocurrency">
+	    <option value="ETH">ETH</option>
+	    <option value="XMR">XMR</option>
+		<option value="ZEC">ZEC</option>
+	    <option value="BTC">BTC</option>
+		<option value="NEO">NEO</option>
+	  	</select>     
+	   	<input type = "submit">
+    </form>
+</body>
+</div>
+</html>
+

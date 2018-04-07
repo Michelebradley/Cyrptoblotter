@@ -1,0 +1,6 @@
+cryptocompare==0.6
+pandas==0.22.0
+pymongo==3.6.1
+matplotlib==2.2.0
+Flask==0.12.2
+requests==2.13.0
